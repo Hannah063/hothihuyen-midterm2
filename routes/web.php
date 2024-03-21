@@ -19,5 +19,27 @@ Route::get('/', function () {
 });
 
 Route::get('/about_us', function () {
-    return view('layouts.about_us');
+    $team = [
+        [
+            ['name' => 'Lawson Arnold'],
+            ['job' => 'CEO, Founder, Atty.'],
+            ['describe' => 'Separated they live in. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.']
+        ],
+        [
+            ['name' => 'Jeremy Walker'],
+            ['job' => 'CEO, Founder, Atty.'],
+            ['describe' => 'Separated they live in. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.']
+        ],
+        [
+            ['name' => 'Patrik White'],
+            ['job' => 'CEO, Founder, Atty.'],
+            ['describe' => 'Separated they live in. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.']
+        ],
+        [
+            ['name' => 'Kathryn Ryan'],
+            ['job' => 'CEO, Founder, Atty.'],
+            ['describe' => 'Separated they live in. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.']
+        ],
+    ];
+    return view('layouts.about_us', ['team' => $team]);
 });
