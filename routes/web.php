@@ -21,24 +21,28 @@ Route::get('/', function () {
 Route::get('/about_us', function () {
     $team = [
         [
-            ['name' => 'Lawson Arnold'],
-            ['job' => 'CEO, Founder, Atty.'],
-            ['describe' => 'Separated they live in. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.']
+            'file' => 'person_1.jpg',
+            'name' => 'Lawson Arnold',
+            'job' => 'CEO, Founder, Atty.',
+            'describe' => 'Separated they live in. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.'
         ],
         [
-            ['name' => 'Jeremy Walker'],
-            ['job' => 'CEO, Founder, Atty.'],
-            ['describe' => 'Separated they live in. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.']
+            'file' => 'person_2.jpg',
+            'name' => 'Jeremy Walker',
+            'job' => 'CEO, Founder, Atty.',
+            'describe' => 'Separated they live in. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.'
         ],
         [
-            ['name' => 'Patrik White'],
-            ['job' => 'CEO, Founder, Atty.'],
-            ['describe' => 'Separated they live in. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.']
+            'file' => 'person_3.jpg',
+            'name' => 'Patrik White',
+            'job' => 'CEO, Founder, Atty.',
+            'describe' => 'Separated they live in. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.'
         ],
         [
-            ['name' => 'Kathryn Ryan'],
-            ['job' => 'CEO, Founder, Atty.'],
-            ['describe' => 'Separated they live in. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.']
+            'file' => 'person_4.jpg',
+            'name' => 'Kathryn Ryan',
+            'job' => 'CEO, Founder, Atty.',
+            'describe' => 'Separated they live in. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.'
         ],
     ];
     return view('layouts.about_us', ['team' => $team]);

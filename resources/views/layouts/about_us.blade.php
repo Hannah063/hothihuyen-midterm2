@@ -73,14 +73,67 @@
     </div>
     <div class="untree_co-section">
         <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-5 mx-auto text-center">
+                    <h2 class="section-title">Our Team</h2>
+                </div>
+            </div>
             <div class="row">
-                @foreach ($team as $member)
-                    @foreach ($member as $info)
-                        <x-team_cart>
-                            <x-slot name="fileName">{{ $name['name'] }}</x-slot>
-                        </x-team_cart>
-                    @endforeach
+                @foreach ($team as $info)
+                    <x-team_cart :file="$info['file']" :name="$info['name']" :job="$info['job']" :describe="$info['describe']">
+                    </x-team_cart>
                 @endforeach
+            </div>
+        </div>
+    </div>
+    <div class="testimonial-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-5 mx-auto text-center">
+                    <h2 class="section-title">Testimonials</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div style="text-align: center;">
+                            <div class="carousel-item active">
+                                <p>“Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus
+                                    malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor
+                                    tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada
+                                    fames ac turpis egestas. Integer convallis volutpat dui quis scelerisque.”</p>
+                                <br>
+                                <img src="{{ asset('assets/images/person-1.png') }}" alt=""
+                                    style="border-radius: 100%; width: 60px ">
+                                <h6>Maria Jones</h6>
+                                <p>CEO, Co-Founder, XYZ Inc.</p>
+                            </div>
+                            @for ($i = 0; $i <= 2; $i++)
+                                <div class="carousel-item">
+                                    <p>“Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus
+                                        malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor
+                                        tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada
+                                        fames ac turpis egestas. Integer convallis volutpat dui quis scelerisque.”</p>
+                                    <br>
+                                    <img src="{{ asset('assets/images/person-1.png') }}" alt=""
+                                        style="border-radius: 100%; width: 60px ">
+                                    <h6>Maria Jones</h6>
+                                    <p>CEO, Co-Founder, XYZ Inc.</p>
+                                </div>
+                            @endfor
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
